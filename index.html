@@ -2,27 +2,26 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Jogo Investigativo</title>
+  <title>Selecione um Crime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: sans-serif;
+      background: #f2f2f2;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
+      gap: 20px;
       padding: 30px;
     }
 
     .card {
-      width: 200px;
-      height: 300px;
-      border: 2px solid #ccc;
+      width: 300px;
+      height: 200px;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       overflow: hidden;
       cursor: pointer;
-      background-color: #fff;
       transition: transform 0.3s;
     }
 
@@ -34,58 +33,37 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: 0.4s ease-in-out;
     }
 
     h1 {
       width: 100%;
       text-align: center;
-      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Cartas Investigativas</h1>
+  <h1>Escolha um Crime para Investigar</h1>
 
-  <!-- Carta 1 -->
-  <div class="card" onclick="flipCard(this)" data-front="pista1.png" data-back="solucao1.png">
-    <img src="pista1.jpg" alt="Pista 1">
-  </div>
+  <a href="crimes/crime1.html" class="card">
+    <img src="imagens/crime1_pista1.png" alt="Crime 1">
+  </a>
 
-  <!-- Carta 2 -->
-  <div class="card" onclick="flipCard(this)" data-front="pista2.png" data-back="solucao2.png">
-    <img src="pista2.jpg" alt="Pista 2">
-  </div>
+  <a href="crimes/crime2.html" class="card">
+    <img src="imagens/crime2_pista1.png" alt="Crime 2">
+  </a>
 
-  <!-- Carta 3 -->
-  <div class="card" onclick="flipCard(this)" data-front="pista3.png" data-back="solucao3.png">
-    <img src="pista3.jpg" alt="Pista 3">
-  </div>
+  <a href="crimes/crime3.html" class="card">
+    <img src="imagens/crime3_pista1.png" alt="Crime 3">
+  </a>
 
-  <!-- Carta 4 -->
-  <div class="card" onclick="flipCard(this)" data-front="pista4.png" data-back="solucao4.png">
-    <img src="pista4.jpg" alt="Pista 4">
-  </div>
+  <a href="crimes/crime4.html" class="card">
+    <img src="imagens/crime4_pista1.png" alt="Crime 4">
+  </a>
 
-  <!-- Carta 5 -->
-  <div class="card" onclick="flipCard(this)" data-front="pista5.png" data-back="solucao5.png">
-    <img src="pista5.jpg" alt="Pista 5">
-  </div>
-
-  <script>
-    function flipCard(card) {
-      const img = card.querySelector("img");
-      const front = card.getAttribute("data-front");
-      const back = card.getAttribute("data-back");
-
-      if (img.src.includes(front)) {
-        img.src = back;
-      } else {
-        img.src = front;
-      }
-    }
-  </script>
+  <a href="crimes/crime5.html" class="card">
+    <img src="imagens/crime5_pista1.png" alt="Crime 5">
+  </a>
 
 </body>
 </html>
