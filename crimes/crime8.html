@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime 8 - A esmeralda de Katmandú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .card {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #fff;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s ease-in-out;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Crime 8 - A esmeralda de Katmandú</h1>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista1.png" data-back="../imagens/crime8_solucao1.png">
+    <img src="../imagens/crime8_pista1.png" data-current="front" alt="Pista 1">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista2.png" data-back="../imagens/crime8_solucao2.png">
+    <img src="../imagens/crime8_pista2.png" data-current="front" alt="Pista 2">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista3.png" data-back="../imagens/crime8_solucao3.png">
+    <img src="../imagens/crime8_pista3.png" data-current="front" alt="Pista 3">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista4.png" data-back="../imagens/crime8_solucao4.png">
+    <img src="../imagens/crime8_pista4.png" data-current="front" alt="Pista 4">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista5.png" data-back="../imagens/crime8_solucao5.png">
+    <img src="../imagens/crime8_pista5.png" data-current="front" alt="Pista 5">
+  </div>
+  
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista6.png" data-back="../imagens/crime8_solucao6.png">
+    <img src="../imagens/crime8_pista6.png" data-current="front" alt="Pista 6">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista7.png" data-back="../imagens/crime8_solucao7.png">
+    <img src="../imagens/crime8_pista7.png" data-current="front" alt="Pista 7">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista8.png" data-back="../imagens/crime8_solucao8.png">
+    <img src="../imagens/crime8_pista8.png" data-current="front" alt="Pista 8">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista9.png" data-back="../imagens/crime8_solucao9.png">
+    <img src="../imagens/crime8_pista9.png" data-current="front" alt="Pista 9">
+  </div>
+
+  <div class="card" onclick="flipCard(this)" data-front="../imagens/crime8_pista10.png" data-back="../imagens/crime8_solucao10.png">
+    <img src="../imagens/crime8_pista10.png" data-current="front" alt="Pista 10">
+  </div>
+
+  <script>
+    function flipCard(card) {
+      const img = card.querySelector("img");
+      const front = card.getAttribute("data-front");
+      const back = card.getAttribute("data-back");
+      const isFront = card.getAttribute("data-current") === "front";
+
+      img.src = isFront ? back : front;
+      card.setAttribute("data-current", isFront ? "back" : "front");
+    }
+  </script>
+
+</body>
+</html>
